@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local and global variables</title>
+</head>
+<body>
+    
+    <script>
+        let a = 10; // global variable
+        console.log("global variable a:", a);
+        let b = 200; // global variable
+        console.log("global variable b:", b);
+        if (true) {
+            let b = 100; // local variable masking global one
+            console.log("global variable a (local access):", a);
+            console.log("local variable b (local access) masking the global variable b:", b);
+            let c = 300; // local variable
+        }
+        // console.log(b); // error, locally declared variable is not accessible globally
+    </script>
+</body>
+</html>
